@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import XMLParser from 'react-xml-parser';
+import Nav from '../components/Nav';
+import Card from '../components/Card';
+import styled from 'styled-components';
+import { setItems } from '../util/LocalStorage';
 const Home = () => {
   const [apiData, setApiData] = useState([]);
   const serviceKey =
@@ -10,10 +14,10 @@ const Home = () => {
   }, []);
   function parseStr(dataSet) {
     const dataArr = new XMLParser().parseFromString(dataSet).children;
-    console.log(dataArr, 'data');
     setApiData(dataArr[1]);
   }
-
+  const dara = new Date();
+  console.log(dara, '날짜');
   const defaultClient = () => {
     axios
       .get(
@@ -21,16 +25,25 @@ const Home = () => {
       )
       .then((res) => {
         const dataSet = res.data;
-
         parseStr(dataSet);
       })
       .catch((err) => {
         console.log(err);
       });
   };
-
-  console.log(apiData.children[1], 'api');
-  return <div>홈</div>;
+  console.log(apiData, 'home');
+  return (
+    <HomeContainer>
+      <Nav />
+      <Card height={300} />
+    </HomeContainer>
+  );
 };
+const HomeContainer = styled.div`
+  background-color: rgb(233, 231, 231);
+  width: 100%;
+  height: 100vw;
+  overflow: hidden;
+`;
 
 export default Home;
