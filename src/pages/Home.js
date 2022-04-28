@@ -12,6 +12,12 @@ const Home = () => {
   const [apiData, setApiData] = useRecoilState(api);
   const [isApi, setIsApi] = useState(false);
   const PROXY = '/data';
+  // 날씨용
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = ('0' + (today.getMonth() + 1)).slice(-2);
+  const day = ('0' + today.getDate()).slice(-2);
+  console.log(year + month + day);
   const serviceKey =
     'Zlb1Vzz%2FXozCyf%2FKGFcPfYHNHsEo0DMxI1YIS5bD1y22HauG3TKirP8dr9aAVg8U5ZpSvWxEC2ppvuXNY7XyYA%3D%3D';
   useEffect(() => {
@@ -26,7 +32,9 @@ const Home = () => {
   const defaultClient = () => {
     axios
       .get(
-        `${PROXY}/1360000/TourStnInfoService/getTourStnVilageFcst?serviceKey=${serviceKey}&numOfRows=10&pageNo=8&CURRENT_DATE=2022042810&HOUR=24&COURSE_ID=1`
+        `${PROXY}/1360000/TourStnInfoService/getTourStnVilageFcst?serviceKey=${serviceKey}&numOfRows=10&pageNo=8&CURRENT_DATE=${
+          year + month + day
+        }00&HOUR=24&COURSE_ID=1`
       )
       .then((res) => {
         const dataSet = res.data;

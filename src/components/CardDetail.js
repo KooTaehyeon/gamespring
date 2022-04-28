@@ -6,8 +6,9 @@ const CardDetail = ({ item }) => {
       <div>날짜: {item.children[0].value}</div>
       <div>지역: {item.children[4].value}</div>
       <div>코스이름:{item.children[8].value}</div>
-      <div>풍향:{item.children[10].value}</div>
-      <div>풍속:{item.children[11].value}</div>
+      <hr />
+      <span>풍향:{item.children[10].value}</span>
+      <span>풍속:{item.children[11].value}</span>
       <div>기온:{item.children[9].value}</div>
     </CardBox>
   );
