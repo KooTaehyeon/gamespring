@@ -1,8 +1,10 @@
 https://kootaehyeon.github.io/gamespring/
 
 ###📌 '기상청 관광코스별 관광지 상세 날씨 API활용'
+
 🚗
 스택
+
 Javascript React Styled-Components recoil react-xml-parser react-router-dom
 
 ✅ api 활용
@@ -17,8 +19,11 @@ api를 가져와보니 xml로 되어있었는데 xml로 되어 있는 구조는 
 json 구조로 바꾸어 해결하였습니다.
 
 🚗 Directory
+
 ├── public/
+
 ├── src/
+
 │ ├── components/ - page components
 │ ├── pages/ - rendering pages
 │ ├── util/ - LocalStorage
