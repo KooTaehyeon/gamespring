@@ -8,7 +8,7 @@ function App() {
     <RecoilRoot>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route exact path='/' element={<Home />} />
+          <Route path='/' element={<Home />} />
           <Route path='/Main' element={<Main />} />
         </Routes>
       </BrowserRouter>

@@ -6,9 +6,11 @@ import styled from 'styled-components';
 import { useRecoilState } from 'recoil';
 import { api } from '../atom';
 import { setItems } from '../util/LocalStorage';
+import Loading from '../components/Loading';
 const Home = () => {
   const navigate = useNavigate();
   const [apiData, setApiData] = useRecoilState(api);
+  const [isApi, setIsApi] = useState(false);
   const PROXY = '/data';
   const serviceKey =
     'Zlb1Vzz%2FXozCyf%2FKGFcPfYHNHsEo0DMxI1YIS5bD1y22HauG3TKirP8dr9aAVg8U5ZpSvWxEC2ppvuXNY7XyYA%3D%3D';
@@ -19,6 +21,7 @@ const Home = () => {
     const dataArr = new XMLParser().parseFromString(dataSet).children;
     setApiData(dataArr[1]);
     setItems(dataArr[1]);
+    setIsApi(!isApi);
   }
   const defaultClient = () => {
     axios
@@ -36,6 +39,7 @@ const Home = () => {
   console.log(apiData, 'home');
   return (
     <Container>
+      {!isApi ? <Loading /> : null}
       <SubTitle>
         <span>게임 스프링</span> 사전과제
       </SubTitle>
