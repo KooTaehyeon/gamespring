@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/gamespring/static/js/main.ef2ae6f6.js",
+    "main.js": "/gamespring/static/js/main.5b969a19.js",
     "static/media/하늘.jpg": "/gamespring/static/media/하늘.b8f82972c8185c13f54a.jpg",
     "index.html": "/gamespring/index.html",
-    "main.ef2ae6f6.js.map": "/gamespring/static/js/main.ef2ae6f6.js.map"
+    "main.5b969a19.js.map": "/gamespring/static/js/main.5b969a19.js.map"
   },
   "entrypoints": [
-    "static/js/main.ef2ae6f6.js"
+    "static/js/main.5b969a19.js"
   ]
 }
