@@ -21,9 +21,7 @@ json 구조로 바꾸어 해결하였습니다.
 🚗 Directory
 
 ├── public/
-
 ├── src/
-
 │ ├── components/ - page components
 │ ├── pages/ - rendering pages
 │ ├── util/ - LocalStorage
