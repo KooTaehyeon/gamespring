@@ -6,7 +6,7 @@ import Main from './pages/Main';
 function App() {
   return (
     <RecoilRoot>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter>
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route path='/Main' element={<Main />} />

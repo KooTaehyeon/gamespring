@@ -1,6 +1,6 @@
 
 [[redirects]]
   from = "/data/*"
-  to = "https://kootaehyeon.github.io/:splat"
+  to = "http://apis.data.go.kr/:splat"
   status = 200
   force = true
