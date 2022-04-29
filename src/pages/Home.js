@@ -11,7 +11,8 @@ const Home = () => {
   const navigate = useNavigate();
   const [apiData, setApiData] = useRecoilState(api);
   const [isApi, setIsApi] = useState(false);
-  const PROXY = window.location.hostname === 'localhost' ? '' : '/data';
+  const PROXY = '/data';
+
   // 날씨용
   const today = new Date();
   const year = today.getFullYear();
