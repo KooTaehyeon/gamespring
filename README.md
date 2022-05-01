@@ -1,4 +1,4 @@
-https://kootaehyeon.github.io/gamespring/
+https://626bd445efa48a7e4725827f--ubiquitous-jalebi-337e04.netlify.app/
 
 ###📌 '기상청 관광코스별 관광지 상세 날씨 API활용'
 
